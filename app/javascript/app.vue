@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <p>{{ message }}</p>
+  <div id='app'>
+    <img src="https://www.imageupload.co.uk/images/2018/02/18/persy.png" border="0">
   </div>
 </template>
 
@@ -15,8 +15,6 @@ export default {
 </script>
 
 <style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+body{ background-color: black; }
+#app{ text-align: center; }
 </style>
