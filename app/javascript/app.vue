@@ -1,6 +1,7 @@
 <template>
   <div id='app'>
-    <img src="https://www.imageupload.co.uk/images/2018/02/18/persy.png" border="0">
+    <img src="https://www.imageupload.co.uk/images/2018/02/18/persy.png"
+      onclick="window.location.pathname == '/' ? window.location.href = '/sign_up' : window.location.href = '/'" border="0">
   </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
   data: function () {
     return {
-      message: "Hello PRSY!"
+      message: 'hi'
     }
   }
 }
@@ -17,4 +18,6 @@ export default {
 <style scoped>
 body{ background-color: black; }
 #app{ text-align: center; }
+img{ padding-top: 20px; width: 25%; }
+img:hover{ border: 20px solid gold; width: 35%; }
 </style>
