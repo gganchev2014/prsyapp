@@ -12,10 +12,21 @@ gem 'foreman'
 gem 'webpacker'
 
 # Authentication
-# gem 'doorkeeper'
-gem 'sorcery'
+gem 'devise', '~> 4.2'
 
-# Email
+# OmniAuth Facebook
+gem 'omniauth-facebook', '~> 4.0'
+
+# OmniAuth Google
+gem 'omniauth-google-oauth2', '~> 0.4.1'
+
+# OmniAuth Twitter
+gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+
+# Use ActiveRecord Sessions
+gem 'activerecord-session_store', '~> 1.0'
+
+# mail
 gem 'validates_email_format_of'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -60,6 +71,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Use Dotenv for environment variables
+  gem 'dotenv', '~> 2.2.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
