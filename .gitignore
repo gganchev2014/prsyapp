@@ -27,4 +27,7 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
-/variables.env
+/.env
+./idea
+.idea/
+.rake_tasks~

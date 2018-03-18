@@ -1,22 +1,21 @@
-class Users::OmniauthController < ApplicationController
+class Users::OmniauthController < Devise::OmniauthCallbacksController
 
-  #facebook callback
-  def facebook
-    @user = User.create_from_provider_data(request.env['omniauth.auth'])
-    if @user.persisted?
-      sign_in_and_redirect @user
-      set_flash_message(:notice, :success, kind: 'Facebook') if is_navigational_format?   
-    else
-      flash[:error] = 'There was a problem signing you in through Facebook. Please register or try signing in later.'
-      redirect_to new_user_registration_url
-    end                
+  def self.provides_callback_for(provider)
+    class_eval %Q{
+      def #{provider}
+        @user = User.create_from_provider_data(request.env['omniauth.auth'])
+        if @user.persisted?
+          sign_in_and_redirect @user
+          set_flash_message(:notice, :sucess, kind: 'Logged in') if is_navigational_format?
+        else
+          flash[:error] = 'There was a problem signing you in throught #{provider}'
+          redirect_to new_user_registration_url
+        end
+      end
+    }
   end
 
-  #google oauth2 callback
-  def google_oauth2
-  end
-
-  #twitter callback
-  def twitter
+  [:facebook, :google_oauth2, :twitter].each do |provider|
+    provides_callback_for provider
   end
 end

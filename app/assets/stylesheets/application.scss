@@ -1,0 +1,17 @@
+@import "bootstrap/navbar";
+@import "bootstrap.min";
+
+.oauth-providers {
+  a:nth-child(1) {
+    @extend .btn, .btn-block, .btn-primary;
+    @extend .mt-4;
+  }
+
+  a:nth-child(2) {
+    @extend .btn, .btn-block, .btn-danger;
+  }
+
+  a:nth-child(3) {
+    @extend .btn, .btn-block, .btn-secondary;
+  }
+}

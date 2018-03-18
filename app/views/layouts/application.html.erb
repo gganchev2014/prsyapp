@@ -5,11 +5,26 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application'%>
-    <%= javascript_pack_tag 'application' %>
+    <%#= stylesheet_pack_tag 'application'%>
+    <%= javascript_pack_tag 'application', :"data-turbolinks-track" => false %>
+    <%= javascript_include_tag 'application', :"data-turbolinks-track" => false %>
+
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+
   </head>
 
-  <body style="background-color: black;">
-    <%= yield %>
+  <body style="">
+    <%= render 'shared/flash_messages' %>
+    <%= yield(:alert) %>
+    <div class="container-fluid">
+      <div id="wrapper">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

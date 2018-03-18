@@ -1,23 +1,29 @@
-<template>
-  <div id='app'>
-    <img src="https://www.imageupload.co.uk/images/2018/02/18/persy.png"
-      onclick="window.location.pathname == '/' ? window.location.href = '/sign_up' : window.location.href = '/'" border="0">
-  </div>
-</template>
+<!--<template>-->
+  <!--<div id='app'>-->
+    <!--<div id="example-2">-->
+      <!--&lt;!&ndash; `greet` is the name of a method defined below &ndash;&gt;-->
+      <!--<button class="btn btn-primary" v-on:click="greet('hi', $event)">Greet</button>-->
+    <!--</div>-->
 
-<script>
-export default {
-  data: function () {
-    return {
-      message: 'hi'
-    }
-  }
-}
-</script>
+  <!--</div>-->
+<!--</template>-->
 
-<style scoped>
-body{ background-color: black; }
-#app{ text-align: center; }
-img{ padding-top: 20px; width: 25%; }
-img:hover{ border: 20px solid gold; width: 35%; }
-</style>
+<!--<script>-->
+<!--export default {-->
+  <!--methods: {-->
+    <!--greet: function (message, event) {-->
+      <!--if(event) event.preventDefault();-->
+      <!--alert(message);-->
+    <!--}-->
+  <!--}-->
+<!--}-->
+
+
+<!--</script>-->
+
+<!--<style scoped>-->
+<!--body{ background-color: white; }-->
+<!--#app{ text-align: center; }-->
+<!--img{ padding-top: 20px; width: 25%; }-->
+<!--img:hover{ width: 26%; }-->
+<!--</style>-->
